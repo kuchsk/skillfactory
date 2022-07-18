@@ -1,2 +1,0 @@
-# skillfactory
-skillfactory homework1
