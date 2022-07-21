@@ -1,66 +1,66 @@
 # Зададим Диапазон угадывания (с миллионом интереснее)
-d = 100
+range = 1000000
 
 import random
 # Импортируем модуль псевдо случайности
 
 # Загадываем число
-l = random.randint(1,(d+1))
+riddle_number = random.randint(1,(range + 1))
 
 # Показываем загаданное число (Чтобы все было честно :) )
-print(f'Загаданное число: {l}')
+print(f'Загаданное число: {riddle_number}')
 
 # Задаем начальную позицию счётчика угадываний
 count = 0
 
-#Задаем первоначальный диапазон сравнения равный половине диапазона угадывания
-pd = d/2
+#Задаем искомое число равное половине диапазона угадывания
+desired_number = range/2
 
-# Задаем шаг деления для попыток угадывания
-pd2 = pd/2
+# Задаем шаг деления равный половине остатка диапазона
+division_step = desired_number/2
 
 # Задаем количество попыток угадывания - не более 20 согласно условию задачи
 while count < 20:
 
 # Проверим условие: загаданное больше половины диапазона угадывания 
-  if l > pd: 
+  if riddle_number > desired_number: 
 
 # Сообщим об этом 
-    print(f'{l} больше {int(pd)}, прибавим {int(pd2)}')
+    print(f'{riddle_number} больше {int(desired_number)}, прибавим {int(division_step)}')
 
 # Изменим диапазон сравнения
-    pd = int(pd) + int(pd2)
+    desired_number = int(desired_number) + int(division_step)
 
 # Минимальный шаг не должен быть меньше единицы, мы ищем целое число
-    if pd2 > 1:
+    if division_step > 1:
 
 # Обновляем диапазон дробления
-      pd2 = int(pd2/2)
-    else: pd2 = 1
+      division_step = int(division_step/2)
+    else: division_step = 1
 
 # Засчитываем попытку угадывания
     count += 1
 
 # Проверим условие: загаданное меньше половины диапазона угадывания
-  elif l < pd: 
+  elif riddle_number < desired_number: 
 
 # Сообщим об этом 
-    print(f'{l} меньше {int(pd)}, вычтем {int(pd2)}')
-    pd = int(pd) - int(pd2)
+    print(f'{riddle_number} меньше {int(desired_number)}, вычтем {int(division_step)}')
+    desired_number = int(desired_number) - int(division_step)
 
 # Минимальный шаг не должен быть меньше единицы, мы ищем целое число
-    if pd2 > 1:
+    if division_step > 1:
 
 # Обновляем диапазон дробления
-      pd2 = int(pd2/2)
-    else: pd2 = 1
+      division_step = int(division_step/2)
+    else: division_step = 1
 
 # Засчитываем попытку угадывания
     count += 1
 
 # Если мы угадали число, сообщим об этом    
   else:
-    print(f'Это число {pd}. Число попыток: {count}') 
+    print(f'Это число {desired_number}. Число попыток: {count}') 
 
 # И выйдем из цикла
     break
