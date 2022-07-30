@@ -82,7 +82,7 @@ def score_game(some):
     tcount.append(random_predict(range))
 
 # Выведем сообщение
-  print(f'Алгоритм угадывает число в среднем за: {sum(tcount)/len(tcount)} попыток')
+  return print(f'Алгоритм угадывает число в среднем за: {sum(tcount)/len(tcount)} попыток')
 
 # Вызовем функцию подсчета среднего значения угадывания
 score_game(random_predict)
