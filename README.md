@@ -24,7 +24,7 @@
 
 #### 9.10. Переведите числовой признак CreditScore в категориальный. Для этого воспользуйтесь функцией get_credit_score_cat(), которая приведена ниже. Примените её к столбцу CreditScore и создайте новый признак CreditScoreCat — категории кредитного рейтинга.
 
- def get_credit_score_cat(credit_score):
+* def get_credit_score_cat(credit_score):
      if credit_score >= 300 and credit_score < 500:
           return "Very_Poor"
  elif credit_score >= 500 and credit_score < 601:
