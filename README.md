@@ -39,7 +39,7 @@
  elif credit_score >= 851:
           return "Top"
  elif credit_score < 300:
-          return "Deep"</sup>
+          return "Deep"
 
 ```          
         
