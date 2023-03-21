@@ -24,21 +24,21 @@
 
 #### 9.10. Переведите числовой признак CreditScore в категориальный. Для этого воспользуйтесь функцией get_credit_score_cat(), которая приведена ниже. Примените её к столбцу CreditScore и создайте новый признак CreditScoreCat — категории кредитного рейтинга.
 
-***def get_credit_score_cat(credit_score):
-    if credit_score >= 300 and credit_score < 500:
-        return "Very_Poor"
-    elif credit_score >= 500 and credit_score < 601:
-        return "Poor"
-    elif credit_score >= 601 and credit_score < 661:
-        return "Fair"
-    elif credit_score >= 661 and credit_score < 781:
-        return "Good"
-    elif credit_score >= 781 and credit_score < 851:
-        return "Excellent"
-    elif credit_score >= 851:
-        return "Top"
-    elif credit_score < 300:
-        return "Deep"
+##### def get_credit_score_cat(credit_score):
+##### if credit_score >= 300 and credit_score < 500:
+#####    return "Very_Poor"
+##### elif credit_score >= 500 and credit_score < 601:
+        ##### return "Poor"
+    ##### elif credit_score >= 601 and credit_score < 661:
+        ##### return "Fair"
+    ##### elif credit_score >= 661 and credit_score < 781:
+        ##### return "Good"
+    ##### elif credit_score >= 781 and credit_score < 851:
+        ##### return "Excellent"
+    ##### elif credit_score >= 851:
+        ##### return "Top"
+    ##### elif credit_score < 300:
+        ##### return "Deep"
         
 Постройте сводную таблицу, строками которой являются категории кредитного рейтинга (CreditScoreCat), а столбцами — количество лет, в течение которых клиент пользуется услугами банка (Tenure). В ячейках сводной таблицы должно находиться среднее по признаку оттока (Exited) — доля ушедших пользователей.
 
