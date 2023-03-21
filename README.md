@@ -39,6 +39,16 @@
           return "Top"
  elif credit_score < 300:
           return "Deep"</sup>```
+          
+```python
+# no reason why this should cause the highlighter to break
+#
+def some_func() -> {
+                     'Some',        # comments
+                     'valid',       # are
+                     'expression'   # good
+                   }:
+```          
         
 Постройте сводную таблицу, строками которой являются категории кредитного рейтинга (CreditScoreCat), а столбцами — количество лет, в течение которых клиент пользуется услугами банка (Tenure). В ячейках сводной таблицы должно находиться среднее по признаку оттока (Exited) — доля ушедших пользователей.
 
